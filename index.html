@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Boa noite, Sthe — Uma carta do Ezequiel</title>
+  <meta name="description" content="Uma página feita por Ezequiel para Sthe: cartas, poemas e pequenos encantos visuais feitos só com HTML e SVG animado.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Container principal -->
+  <main>
+    <!-- Cabeçalho com saudação -->
+    <header>
+      <h1>Boa noite, Sthe 💖</h1>
+      <p>Mesmo no tédio, eu penso em você — e escrevo até a borda do universo.</p>
+    </header>
+
+    <!-- Coração animado em SVG (SMIL) - animações dentro do SVG, sem CSS/JS externos -->
+    <section aria-label="coração-animado">
+      <svg viewBox="0 0 200 200" width="320" height="320" role="img" aria-labelledby="heartTitle">
+        <title id="heartTitle">Coração que pulsa por Sthe</title>
+
+        <!-- défine caminho do coração -->
+        <g transform="translate(100,100)">
+          <path id="heartPath" d="M0 -30 C -25 -60 -70 -45 -70 -7 C -70 30 -35 55 0 80 C 35 55 70 30 70 -7 C 70 -45 25 -60 0 -30 Z" fill="#ffb6c1" stroke="#ff7aa2" stroke-width="2">
+            <!-- pulsa (scale) -->
+            <animateTransform attributeName="transform" type="scale" values="1;1.06;1" dur="1.6s" repeatCount="indefinite"/>
+            <!-- variação sutil de cor via atributo fill -->
+            <animate attributeName="fill" values="#ffb6c1;#ffc9d9;#ffb6c1" dur="3s" repeatCount="indefinite"/>
+          </path>
+
+          <!-- pequenos corações que flutuam (duplicados com delays) -->
+          <g>
+            <path d="M-10 -50 C -18 -62 -45 -55 -45 -40 C -45 -27 -30 -15 -10 -2 C 10 -15 25 -27 25 -40 C 25 -55 8 -62 -10 -50 Z" fill="#ffd9e6" opacity="0.9">
+              <animateTransform attributeName="transform" type="translate" values="-8,-10; -16,-40; -8,-80" dur="6s" begin="0s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.9;0.5;0" dur="6s" begin="0s" repeatCount="indefinite"/>
+            </path>
+
+            <path d="M20 -40 C 12 -52 -15 -45 -15 -30 C -15 -17 0 -5 20 8 C 40 -5 55 -17 55 -30 C 55 -45 38 -52 20 -40 Z" fill="#ffeef6" opacity="0.85">
+              <animateTransform attributeName="transform" type="translate" values="12,-8; 26,-36; 42,-72" dur="6.4s" begin="0.6s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.85;0.45;0" dur="6.4s" begin="0.6s" repeatCount="indefinite"/>
+            </path>
+
+            <path d="M-30 -10 C -38 -22 -65 -15 -65 0 C -65 13 -50 25 -30 38 C -10 25 5 13 5 0 C 5 -15 -12 -22 -30 -10 Z" fill="#fff0f7" opacity="0.8">
+              <animateTransform attributeName="transform" type="translate" values="0,6; -6,36; -12,78" dur="7s" begin="1.2s" repeatCount="indefinite"/>
+              <animate attributeName="opacity" values="0.8;0.4;0" dur="7s" begin="1.2s" repeatCount="indefinite"/>
+            </path>
+          </g>
+        </g>
+      </svg>
+    </section>
+
+    <!-- Série de cartas/poemas - usar <details> para efeito de abrir/fechar como se fosse uma carta -->
+    <section aria-label="cartas">
+      <h2>Cartas para quando eu não tenho coragem de dizer tudo</h2>
+
+      <!-- Carta 1 -->
+      <article>
+        <details open>
+          <summary><strong>Carta 1 — A que começa no tédio</strong></summary>
+          <p>Sthe,</p>
+          <p>Quando o tédio chega — aquele vazio com cara de parede limpa — eu fecho os olhos e você aparece com as roupas das suas risadas. É curioso: a tua lembrança tem textura, tem cheiro de café, tem um jeito de mover o mundo só pra caber a gente. </p>
+          <p>Não digo isso pra impressionar; digo porque é verdade. Eu poderia escrever uma infinidade de desculpas para não te acordar com mensagens demais, e ao mesmo tempo escrever um universo inteiro só pra te fazer sorrir.</p>
+          <p>Com carinho,</p>
+          <p><em>Ezequiel</em></p>
+        </details>
+      </article>
+
+      <!-- Carta 2 -->
+      <article>
+        <details>
+          <summary><strong>Carta 2 — A que tem pequenas promessas</strong></summary>
+          <p>Minha promessa não é grande — ela é cotidiana. Prometo lembrar do teu café preferido quando você estiver cansada, prometer compartilhar o cobertor quando fizer frio, prometer roubar um beijo quando você menos esperar.</p>
+          <p>Prometo também não te transformar em desculpa para mim; prometo te tratar como prioridade mesmo quando o mundo me convence do contrário.</p>
+          <p>Teu,</p>
+          <p><em>E.</em></p>
+        </details>
+      </article>
+
+      <!-- Carta 3 -->
+      <article>
+        <details>
+          <summary><strong>Carta 3 — A que é só poema</strong></summary>
+          <blockquote>
+            Comparado a você, até as estrelas se ofendem de brilharem.
+            <br>
+            Eu, um curioso feio — e orgulhoso desse sorriso que você tem —
+            <br>
+            me acho pequeno diante do teu nome, porque teu nome cabe em tudo.
+          </blockquote>
+          <p>Se eu pudesse, escreveria teu nome em cada margem, Sthe. Porque onde teu nome estiver, mesmo o tédio vira cenário.</p>
+          <p>Com o universo no bolso,</p>
+          <p><em>Ezequiel</em></p>
+        </details>
+      </article>
+
+      <!-- Carta 4: convite/boa noite -->
+      <article>
+        <details>
+          <summary><strong>Carta 4 — Um bom sono</strong></summary>
+          <p>Feche os olhos. Imagina que eu estou aí — não pra resolver teus problemas, mas pra ser o lugar onde tua respiração desacelera e tu relaxa. Se eu pudesse, colocaria todas as minhas palavras sob teu travesseiro.</p>
+          <p>Boa noite, Sthe. Te amo mais do que eu sei nomear.</p>
+          <p>— E.</p>
+        </details>
+      </article>
+    </section>
+
+    <!-- Pequena seção de 'pequenas surpresas' usando datalist e input (ainda sem JS) -->
+    <section aria-label="surpresas">
+      <h2>Pequenas surpresas</h2>
+      <p>Escolha uma palavra e imagine que, logo em seguida, eu te mando um bilhete com ela.</p>
+      <form>
+        <label for="palavra">Palavra que eu te envio:</label>
+        <input id="palavra" name="palavra" list="opcoes" placeholder="amor, sorriso, sono, abraço">
+        <datalist id="opcoes">
+          <option value="amor"></option>
+          <option value="sorriso"></option>
+          <option value="sono"></option>
+          <option value="abraço"></option>
+          <option value="te amo"></option>
+        </datalist>
+      </form>
+      <p>Mesmo sem eu apertar nenhum botão, imagine que eu escrevi um bilhete com a palavra que você escolheu — e que eu o guardei no bolso até te ver.</p>
+    </section>
+
+    <!-- Assinatura estilizada (simples) -->
+    <footer>
+      <p>Feito por <strong>Ezequiel</strong> — para <strong>Sthe</strong>. <small>Um presente bobo e sincero.</small></p>
+      <p><small>Salvar como <code>boa-noite-sthe.html</code> e abrir no navegador para ver.</small></p>
+    </footer>
+  </main>
+
+  <!-- Nota pequena para compatibilidade -->
+  <noscript>
+    <p>Este arquivo foi feito apenas em HTML e SVG animado; não há scripts externos.</p>
+  </noscript>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
